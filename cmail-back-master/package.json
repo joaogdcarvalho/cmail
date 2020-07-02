@@ -1,0 +1,50 @@
+{
+  "name": "cmail-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV='production' nodemon ./server.js --exec babel-node",
+    "dev": "cross-env NODE_ENV='development' nodemon ./server.js --exec babel-node",
+    "debug": "cross-env NODE_ENV='development' nodemon --inspect ./server.js --exec babel-node",
+    "test-integration": "cross-env NODE_ENV='test' nyc --reporter=text --reporter=html --reporter=lcov mocha --require @babel/register --recursive './test/integration'",
+    "test": "cross-env NODE_ENV='test' nyc --reporter=text --reporter=html --reporter=lcov mocha --require @babel/register --recursive './test/**/*.test.js'",
+    "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/node": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-syntax-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "@types/joi": "^13.4.5",
+    "better-validator": "^2.1.8",
+    "body-parser": "^1.18.3",
+    "celebrate": "^8.0.2",
+    "chai": "^4.1.2",
+    "consign": "^0.1.6",
+    "cors": "^2.8.5",
+    "cross-env": "^5.2.0",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-joi-validation": "^0.2.1",
+    "fluent-validator": "^1.1.0",
+    "http-status": "^1.2.0",
+    "joi": "^13.6.0",
+    "jsonwebtoken": "^8.3.0",
+    "mocha": "^5.2.0",
+    "sequelize": "^4.38.0",
+    "sqlite3": "^4.1.0",
+    "supertest": "^3.2.0"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.2",
+    "nodemon": "^1.18.4",
+    "nyc": "^13.0.1"
+  }
+}
