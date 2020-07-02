@@ -1,0 +1,15 @@
+version: 2
+jobs:
+  build:
+    environment:
+      CC_TEST_REPORTER_ID: e6f9c464fd919e6bbabc74b9c24d0f99bef48b4546ee5ae11ffdef3794302a35
+    working_directory: ~/tmp
+    docker:
+      - image: circleci/node:8
+        environment: 
+          repo_token: lMhmDbvzUYOq3UViwOsrorbULyFtr0byN 
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm run test-integration
+      - run: npm run coveralls
