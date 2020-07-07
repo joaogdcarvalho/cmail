@@ -1,0 +1,42 @@
+.mdl-layout {
+    background: linear-gradient(to bottom, #fcfff4 0%,#e9e9ce 100%); 
+  }
+  
+  .page-content, .mdl-grid {
+    box-sizing: border-box;
+    height: 100%;
+  }
+  
+  .mdl-shadow--2dp {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 
+    0 3px 1px -2px rgba(0,0,0,.2), 
+    0 1px 5px 0 rgba(0,0,0,.12),
+    10px 40px 90px 10px rgba(0,0,0,.5);
+  }
+  
+  .mdl-grid {
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .demo-card-wide.mdl-card {
+    width: 512px;
+  }
+  
+  .demo-card-wide>.mdl-card__title {
+    color: #fff;
+    height: 176px;
+    background: url('http://creativeloads.com/foto/vector-triangle-background-215.jpg') center / cover;
+  }
+  
+  .demo-card-wide>.mdl-card__menu {
+    color: #fff;
+  }
+  
+  .mdl-card__actions {
+    margin-top: 25px;
+  }
+  
+  .mdl-button.entrar {
+    float: right;
+  }

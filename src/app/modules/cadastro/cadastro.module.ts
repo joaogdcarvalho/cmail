@@ -7,19 +7,19 @@ import {CmailFormGroupComponent } from 'src/app/components/cmail-form-group/cmai
 import {CmailFormFieldDirective } from 'src/app/components/cmail-form-group/cmail-form-field.directive';
 import { SharedComponentModule } from 'src/app/components/shared-components.module';
 import { CadastroRoutingModule } from './cadastro-routing.module';
+import { CMailFormModule } from '../../components/cmail-form-group/cmail-form.module';
 
 @NgModule({
   declarations: [
-  CadastroComponent,
-  CmailFormGroupComponent,
-  CmailFormFieldDirective
+    CadastroComponent
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     SharedComponentModule,
-    CmailFormModule,
-    CadastroRoutingModule
+    CMailFormModule,
+    CadastroRoutingModule,
+    HttpClientModule
   ],
 })
 

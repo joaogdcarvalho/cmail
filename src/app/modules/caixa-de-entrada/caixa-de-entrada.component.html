@@ -6,8 +6,12 @@
         <div class="mdl-grid">
           <ul>
             <li *ngFor="let email of emailList">
-              <strong>Para:</strong>{{email.destinatario}} <br>
-              <strong>Assunto:</strong>{{email.assunto}}
+              <cmail-list-item
+              [destinatario]="email.destinatario"
+              [assunto]="email.assunto"
+              [introducaoDoConteudo]="email.introducaoDoConteudo"
+              [dataDeEnvio]="email.dataDeEnvio"
+              ></cmail-list-item>
             </li>
           </ul>
         </div>
@@ -61,6 +65,10 @@
                     <span class="mdl-textfield__formline"></span>
                   </div>
                 </div><!-- ./[Conteúdo] -->
+
+                <cmail-list-item></cmail-list-item>
+                <cmail-list-item></cmail-list-item>
+                <cmail-list-item></cmail-list-item>
   
                 <!-- ./Form Fields -->
               </div>
