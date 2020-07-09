@@ -5,7 +5,7 @@
     </button>
   
     <div class="mdl-layout__header-row">
-      <span class="headerGlobal__title mdl-layout-title">Título da página atual</span>
+      <span class="headerGlobal__title mdl-layout-title">{{tituloDaPagina}}</span>
   
       <div class="mdl-layout-spacer"></div>
   
@@ -17,7 +17,7 @@
           <span class="material-icons">search</span>
         </label>
         <div class="mdl-textfield__expandable-holder">
-          <input class="headerSearch__input mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp"
+          <input (input)="handleBuscaChanges($event)" class="headerSearch__input mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp"
             placeholder="Filtrar e-mails...">
         </div>
       </div>

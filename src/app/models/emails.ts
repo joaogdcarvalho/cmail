@@ -3,18 +3,20 @@ export class Email {
     assunto = '';
     conteudo = '';
     dataDeEnvio = '';
-    
-    constructor(
-        { destinatario, assunto, conteudo, dataDeEnvio}:
-        { destinatario: string, assunto: string, conteudo: string, dataDeEnvio: string }
-        ){
-            this.destinatario = destinatario;
-            this.assunto = assunto;
-            this.conteudo = conteudo;
-            this.dataDeEnvio = dataDeEnvio;
-        }
-
-        get introducaoDoConteudo() {
-            return this.conteudo.substr(0,140) + '...'
-        }
+    id = ''; //Propriedade id!
+    constructor (
+    { destinatario, assunto, conteudo, dataDeEnvio, id}: //id aqui
+    { destinatario: string, assunto: string, conteudo: string, dataDeEnvio: string, id: string }
+    //tipo do id aqui
+    ){
+    this.destinatario = destinatario;
+    this.assunto = assunto;
+    this.conteudo = conteudo;
+    this.dataDeEnvio = dataDeEnvio;
+    this.id = id; //id aqui
     }
+    get introducaoDoConteudo() {
+    return this.conteudo.substr(0, 140) + '...'
+
+}
+}

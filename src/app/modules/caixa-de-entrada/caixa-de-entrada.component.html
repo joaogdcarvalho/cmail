@@ -4,19 +4,6 @@
       <div class="page-content">
   
         <div class="mdl-grid">
-          <ul>
-            <li *ngFor="let email of emailList">
-              <cmail-list-item
-              [destinatario]="email.destinatario"
-              [assunto]="email.assunto"
-              [introducaoDoConteudo]="email.introducaoDoConteudo"
-              [dataDeEnvio]="email.dataDeEnvio"
-              ></cmail-list-item>
-            </li>
-          </ul>
-        </div>
-  
-        <div class="mdl-grid">
           <!-- Floating Multiline Textfield -->
           <button class="globalFab tooltip btn mdl-button mdl-js-button mdl-button--fab mdl-button--colored" role="tooltip"
             aria-label="Criar novo email" (click)="toggleNewEmailForm()">
@@ -66,9 +53,25 @@
                   </div>
                 </div><!-- ./[Conteúdo] -->
 
+                <!--
                 <cmail-list-item></cmail-list-item>
                 <cmail-list-item></cmail-list-item>
                 <cmail-list-item></cmail-list-item>
+                -->
+
+                <div class="mdl-grid">
+                  <ul>
+                    <li *ngFor="let email of filtrarEmailsPorAssunto()">
+                    <cmail-list-item
+                    [destinatario]="email.destinatario"
+                    [assunto]="email.assunto"
+                    [introducaoDoConteudo]="email.introducaoDoConteudo"
+                    [dataDeEnvio]="email.dataDeEnvio"
+                    (eventoVaiRemover)="handleRemoveEmail($event, email.id)"
+                    ></cmail-list-item>
+                    </li>
+                    </ul>
+                </div>
   
                 <!-- ./Form Fields -->
               </div>
