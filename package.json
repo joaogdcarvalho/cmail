@@ -21,6 +21,7 @@
     "@angular/router": "^8.2.14",
     "kind-of": "^6.0.3",
     "minimist": "^1.2.5",
+    "mixin-deep": "^2.0.1",
     "rxjs": "~6.4.0",
     "sequelize": "^6.3.0",
     "set-value": "^3.0.2",
