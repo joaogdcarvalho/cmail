@@ -37,7 +37,7 @@
     "http-status": "^1.2.0",
     "joi": "^13.6.0",
     "jsonwebtoken": "^8.3.0",
-    "mocha": "^5.2.0",
+    "mocha": "^10.0.0",
     "sequelize": "^5.15.1",
     "sqlite3": "^4.1.0",
     "supertest": "^3.2.0"
